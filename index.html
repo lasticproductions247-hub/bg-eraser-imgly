@@ -179,7 +179,7 @@ kbd{padding:2px 7px;border-radius:5px;font-size:11px;background:var(--surface);b
 const IMGLY_VERSION  = '1.5.5';
 const IMGLY_DATA_VER = '1.4.5';
 const CDN            = 'https://cdn.jsdelivr.net/npm/@imgly/background-removal@' + IMGLY_VERSION + '/+esm';
-const PUBLIC_PATH    = 'https://staticimgly.com/@imgly/background-removal-data/' + IMGLY_DATA_VER + '/dist/';
+const PUBLIC_PATH    = new URL('models/', location.href.endsWith('/') ? location.href : location.href + '/').href;
 
 const $ = id => document.getElementById(id);
 
